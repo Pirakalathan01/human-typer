@@ -1,0 +1,32 @@
+{
+  "name": "human-typer",
+  "version": "1.0.0",
+  "description": "Type any text into any application like a human",
+  "main": "main.js",
+  "author": "Jen Infotech",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win portable"
+  },
+  "dependencies": {
+    "@nut-tree-fork/nut-js": "^4.2.0"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.jeninfotech.humantyper",
+    "productName": "HumanTyper",
+    "win": {
+      "target": "portable",
+      "icon": "icon.ico"
+    },
+    "portable": {
+      "artifactName": "HumanTyper-${version}-portable.exe"
+    },
+    "asarUnpack": [
+      "node_modules/@nut-tree-fork/**"
+    ]
+  }
+}
